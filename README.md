@@ -1,0 +1,2 @@
+# fujihira_snowflake
+Snowflakeの動作確認を行うためのリポジトリ
