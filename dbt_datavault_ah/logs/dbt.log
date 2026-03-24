@@ -10,3 +10,211 @@ Compilation Error
 [0m19:54:03.797281 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.0529661, "process_in_blocks": "0", "process_kernel_time": 1.0, "process_mem_max_rss": "399824", "process_out_blocks": "0", "process_user_time": 4.33}
 [0m19:54:03.798050 [debug] [Dummy-1   ]: Command `cli compile` failed at 19:54:03.797749 after 1.05 seconds
 [0m19:54:03.798823 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 21:04:53.089309 | 1e058b42-02bd-42d5-8d71-90cde209d9cf ==============================
+[0m21:04:53.089309 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m21:04:53.090563 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'log_path': '/tmp/dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt ', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'log_format': 'default', 'send_anonymous_usage_stats': 'False'}
+[0m21:04:53.498551 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m21:04:54.082524 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m21:04:54.084476 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:04:58.621590 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m21:04:58.624664 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m21:04:58.670454 [info ] [Dummy-1   ]: Found 19 models, 5 sources, 832 macros
+[0m21:04:58.674275 [info ] [Dummy-1   ]: 
+[0m21:04:58.674948 [info ] [Dummy-1   ]: Concurrency: 4 threads (target='dev')
+[0m21:04:58.675465 [info ] [Dummy-1   ]: 
+[0m21:04:58.676387 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m21:04:58.685406 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA'
+[0m21:04:58.799950 [debug] [ThreadPool]: Using snowflake connection "list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA"
+[0m21:04:58.800650 [debug] [ThreadPool]: On list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "connection_name": "list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m21:04:58.801203 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:05:00.170398 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.369 seconds
+[0m21:05:00.176649 [debug] [ThreadPool]: Using snowflake connection "list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA"
+[0m21:05:00.177354 [debug] [ThreadPool]: On list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "connection_name": "list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA"} */
+show objects in S45969_DBT_DB.S45969_DBT_AH_SCHEMA
+    limit 10000
+    
+;
+[0m21:05:00.615779 [debug] [ThreadPool]: SQL status: SUCCESS 19 in 0.438 seconds
+[0m21:05:00.619436 [debug] [ThreadPool]: Using snowflake connection "list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA"
+[0m21:05:00.620182 [debug] [ThreadPool]: On list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "connection_name": "list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m21:05:00.822089 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.201 seconds
+[0m21:05:00.839090 [debug] [Thread-2 (]: Began running node model.dbt_datavault_ah.raw_company
+[0m21:05:00.839981 [debug] [Thread-3 (]: Began running node model.dbt_datavault_ah.raw_employee
+[0m21:05:00.840720 [debug] [Thread-4 (]: Began running node model.dbt_datavault_ah.raw_employee_organization
+[0m21:05:00.841454 [debug] [Thread-5 (]: Began running node model.dbt_datavault_ah.raw_organization
+[0m21:05:00.842311 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_S45969_DBT_DB_S45969_DBT_AH_SCHEMA, now model.dbt_datavault_ah.raw_company)
+[0m21:05:00.843192 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.dbt_datavault_ah.raw_employee'
+[0m21:05:00.844059 [debug] [Thread-4 (]: Acquiring new snowflake connection 'model.dbt_datavault_ah.raw_employee_organization'
+[0m21:05:00.844866 [debug] [Thread-5 (]: Acquiring new snowflake connection 'model.dbt_datavault_ah.raw_organization'
+[0m21:05:00.845543 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault_ah.raw_company
+[0m21:05:00.846148 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault_ah.raw_employee
+[0m21:05:00.846745 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault_ah.raw_employee_organization
+[0m21:05:00.847333 [debug] [Thread-5 (]: Began compiling node model.dbt_datavault_ah.raw_organization
+[0m21:05:00.861882 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault_ah.raw_company"
+[0m21:05:00.870820 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault_ah.raw_employee"
+[0m21:05:00.882520 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault_ah.raw_employee_organization"
+[0m21:05:00.891325 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_datavault_ah.raw_organization"
+[0m21:05:00.893667 [debug] [Thread-3 (]: Began executing node model.dbt_datavault_ah.raw_employee
+[0m21:05:00.894319 [debug] [Thread-2 (]: Began executing node model.dbt_datavault_ah.raw_company
+[0m21:05:00.895338 [debug] [Thread-4 (]: Began executing node model.dbt_datavault_ah.raw_employee_organization
+[0m21:05:00.896633 [debug] [Thread-3 (]: Finished running node model.dbt_datavault_ah.raw_employee
+[0m21:05:00.897357 [debug] [Thread-5 (]: Began executing node model.dbt_datavault_ah.raw_organization
+[0m21:05:00.898501 [debug] [Thread-2 (]: Finished running node model.dbt_datavault_ah.raw_company
+[0m21:05:00.899675 [debug] [Thread-4 (]: Finished running node model.dbt_datavault_ah.raw_employee_organization
+[0m21:05:00.900484 [debug] [Thread-3 (]: Began running node model.dbt_datavault_ah.raw_sales
+[0m21:05:00.901942 [debug] [Thread-5 (]: Finished running node model.dbt_datavault_ah.raw_organization
+[0m21:05:00.902753 [debug] [Thread-2 (]: Began running node model.dbt_datavault_ah.v_stg_employee
+[0m21:05:00.903927 [debug] [Thread-4 (]: Began running node model.dbt_datavault_ah.v_stg_company
+[0m21:05:00.905107 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.raw_employee, now model.dbt_datavault_ah.raw_sales)
+[0m21:05:00.905925 [debug] [Thread-5 (]: Began running node model.dbt_datavault_ah.v_stg_employee_organization
+[0m21:05:00.907044 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.raw_company, now model.dbt_datavault_ah.v_stg_employee)
+[0m21:05:00.907876 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.raw_employee_organization, now model.dbt_datavault_ah.v_stg_company)
+[0m21:05:00.908616 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault_ah.raw_sales
+[0m21:05:00.909400 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.raw_organization, now model.dbt_datavault_ah.v_stg_employee_organization)
+[0m21:05:00.910057 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault_ah.v_stg_employee
+[0m21:05:00.910664 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault_ah.v_stg_company
+[0m21:05:00.919203 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault_ah.raw_sales"
+[0m21:05:00.919965 [debug] [Thread-5 (]: Began compiling node model.dbt_datavault_ah.v_stg_employee_organization
+[0m21:05:00.948922 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_employee"
+[0m21:05:00.969055 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_company"
+[0m21:05:00.987194 [debug] [Thread-3 (]: Began executing node model.dbt_datavault_ah.raw_sales
+[0m21:05:00.988258 [debug] [Thread-5 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_employee_organization"
+[0m21:05:00.989734 [debug] [Thread-2 (]: On model.dbt_datavault_ah.v_stg_employee: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_employee"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_employee
+[0m21:05:00.991408 [debug] [Thread-4 (]: On model.dbt_datavault_ah.v_stg_company: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_company"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_company
+[0m21:05:00.993162 [debug] [Thread-3 (]: Finished running node model.dbt_datavault_ah.raw_sales
+[0m21:05:00.994338 [debug] [Thread-5 (]: On model.dbt_datavault_ah.v_stg_employee_organization: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_employee_organization"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_employee_organization
+[0m21:05:00.996527 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m21:05:00.998936 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m21:05:01.000543 [debug] [Thread-3 (]: Began running node model.dbt_datavault_ah.v_stg_organization
+[0m21:05:01.002690 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m21:05:01.005401 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.raw_sales, now model.dbt_datavault_ah.v_stg_organization)
+[0m21:05:01.006762 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault_ah.v_stg_organization
+[0m21:05:01.026773 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_organization"
+[0m21:05:01.028521 [debug] [Thread-3 (]: On model.dbt_datavault_ah.v_stg_organization: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_organization"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_organization
+[0m21:05:01.030610 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:05:02.240692 [debug] [Thread-4 (]: SQL status: SUCCESS 4 in 1.242 seconds
+[0m21:05:02.243193 [debug] [Thread-3 (]: SQL status: SUCCESS 4 in 1.213 seconds
+[0m21:05:02.252030 [debug] [Thread-2 (]: SQL status: SUCCESS 7 in 1.256 seconds
+[0m21:05:02.260985 [debug] [Thread-4 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_company"
+[0m21:05:02.272816 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_organization"
+[0m21:05:02.284960 [debug] [Thread-2 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_employee"
+[0m21:05:02.285761 [debug] [Thread-4 (]: On model.dbt_datavault_ah.v_stg_company: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_company"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_company
+[0m21:05:02.286493 [debug] [Thread-3 (]: On model.dbt_datavault_ah.v_stg_organization: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_organization"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_organization
+[0m21:05:02.287180 [debug] [Thread-2 (]: On model.dbt_datavault_ah.v_stg_employee: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_employee"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_employee
+[0m21:05:02.316601 [debug] [Thread-5 (]: SQL status: SUCCESS 4 in 1.314 seconds
+[0m21:05:02.330946 [debug] [Thread-5 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_employee_organization"
+[0m21:05:02.331787 [debug] [Thread-5 (]: On model.dbt_datavault_ah.v_stg_employee_organization: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_employee_organization"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_employee_organization
+[0m21:05:02.426948 [debug] [Thread-3 (]: SQL status: SUCCESS 4 in 0.138 seconds
+[0m21:05:02.435907 [debug] [Thread-2 (]: SQL status: SUCCESS 7 in 0.147 seconds
+[0m21:05:02.439438 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault_ah.v_stg_organization"
+[0m21:05:02.454088 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault_ah.v_stg_employee"
+[0m21:05:02.455444 [debug] [Thread-3 (]: Began executing node model.dbt_datavault_ah.v_stg_organization
+[0m21:05:02.456264 [debug] [Thread-2 (]: Began executing node model.dbt_datavault_ah.v_stg_employee
+[0m21:05:02.457407 [debug] [Thread-3 (]: Finished running node model.dbt_datavault_ah.v_stg_organization
+[0m21:05:02.458582 [debug] [Thread-2 (]: Finished running node model.dbt_datavault_ah.v_stg_employee
+[0m21:05:02.459439 [debug] [Thread-3 (]: Began running node model.dbt_datavault_ah.v_stg_sales
+[0m21:05:02.460770 [debug] [Thread-2 (]: Began running node model.dbt_datavault_ah.hub_organization
+[0m21:05:02.461971 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.v_stg_organization, now model.dbt_datavault_ah.v_stg_sales)
+[0m21:05:02.462725 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.v_stg_employee, now model.dbt_datavault_ah.hub_organization)
+[0m21:05:02.463402 [debug] [Thread-3 (]: Began compiling node model.dbt_datavault_ah.v_stg_sales
+[0m21:05:02.464061 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault_ah.hub_organization
+[0m21:05:02.470520 [debug] [Thread-4 (]: SQL status: SUCCESS 4 in 0.182 seconds
+[0m21:05:02.483886 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_sales"
+[0m21:05:02.502365 [debug] [Thread-5 (]: SQL status: SUCCESS 4 in 0.170 seconds
+[0m21:05:02.519714 [info ] [Thread-2 (]: 21:05:02 + Loading S45969_DBT_DB.S45969_DBT_AH_SCHEMA.hub_organization from 1 source(s)
+[0m21:05:02.525413 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault_ah.v_stg_company"
+[0m21:05:02.526717 [debug] [Thread-3 (]: On model.dbt_datavault_ah.v_stg_sales: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_sales"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_sales
+[0m21:05:02.543268 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_datavault_ah.v_stg_employee_organization"
+[0m21:05:02.551622 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault_ah.hub_organization"
+[0m21:05:02.553819 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m21:05:02.555317 [debug] [Thread-4 (]: Began executing node model.dbt_datavault_ah.v_stg_company
+[0m21:05:02.556585 [debug] [Thread-5 (]: Began executing node model.dbt_datavault_ah.v_stg_employee_organization
+[0m21:05:02.558734 [debug] [Thread-4 (]: Finished running node model.dbt_datavault_ah.v_stg_company
+[0m21:05:02.559446 [debug] [Thread-2 (]: Began executing node model.dbt_datavault_ah.hub_organization
+[0m21:05:02.560636 [debug] [Thread-5 (]: Finished running node model.dbt_datavault_ah.v_stg_employee_organization
+[0m21:05:02.561478 [debug] [Thread-4 (]: Began running node model.dbt_datavault_ah.sat_organization
+[0m21:05:02.563050 [debug] [Thread-2 (]: Finished running node model.dbt_datavault_ah.hub_organization
+[0m21:05:02.563902 [debug] [Thread-5 (]: Began running node model.dbt_datavault_ah.hub_employee
+[0m21:05:02.564934 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.v_stg_company, now model.dbt_datavault_ah.sat_organization)
+[0m21:05:02.565706 [debug] [Thread-2 (]: Began running node model.dbt_datavault_ah.sat_employee
+[0m21:05:02.566514 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.v_stg_employee_organization, now model.dbt_datavault_ah.hub_employee)
+[0m21:05:02.567188 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault_ah.sat_organization
+[0m21:05:02.567934 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.hub_organization, now model.dbt_datavault_ah.sat_employee)
+[0m21:05:02.568629 [debug] [Thread-5 (]: Began compiling node model.dbt_datavault_ah.hub_employee
+[0m21:05:02.588198 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault_ah.sat_organization"
+[0m21:05:02.588971 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault_ah.sat_employee
+[0m21:05:02.599041 [info ] [Thread-5 (]: 21:05:02 + Loading S45969_DBT_DB.S45969_DBT_AH_SCHEMA.hub_employee from 1 source(s)
+[0m21:05:02.621619 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault_ah.sat_employee"
+[0m21:05:02.622339 [debug] [Thread-4 (]: Began executing node model.dbt_datavault_ah.sat_organization
+[0m21:05:02.627043 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_datavault_ah.hub_employee"
+[0m21:05:02.628667 [debug] [Thread-4 (]: Finished running node model.dbt_datavault_ah.sat_organization
+[0m21:05:02.629421 [debug] [Thread-2 (]: Began executing node model.dbt_datavault_ah.sat_employee
+[0m21:05:02.630396 [debug] [Thread-4 (]: Began running node model.dbt_datavault_ah.hub_company
+[0m21:05:02.631141 [debug] [Thread-5 (]: Began executing node model.dbt_datavault_ah.hub_employee
+[0m21:05:02.632215 [debug] [Thread-2 (]: Finished running node model.dbt_datavault_ah.sat_employee
+[0m21:05:02.632983 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.sat_organization, now model.dbt_datavault_ah.hub_company)
+[0m21:05:02.634035 [debug] [Thread-5 (]: Finished running node model.dbt_datavault_ah.hub_employee
+[0m21:05:02.634801 [debug] [Thread-2 (]: Began running node model.dbt_datavault_ah.sat_company
+[0m21:05:02.635554 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault_ah.hub_company
+[0m21:05:02.636298 [debug] [Thread-5 (]: Began running node model.dbt_datavault_ah.link_emp_org
+[0m21:05:02.637099 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.sat_employee, now model.dbt_datavault_ah.sat_company)
+[0m21:05:02.647526 [info ] [Thread-4 (]: 21:05:02 + Loading S45969_DBT_DB.S45969_DBT_AH_SCHEMA.hub_company from 1 source(s)
+[0m21:05:02.648482 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.hub_employee, now model.dbt_datavault_ah.link_emp_org)
+[0m21:05:02.649224 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault_ah.sat_company
+[0m21:05:02.655895 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault_ah.hub_company"
+[0m21:05:02.656667 [debug] [Thread-5 (]: Began compiling node model.dbt_datavault_ah.link_emp_org
+[0m21:05:02.675972 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault_ah.sat_company"
+[0m21:05:02.686691 [info ] [Thread-5 (]: 21:05:02 + Loading S45969_DBT_DB.S45969_DBT_AH_SCHEMA.link_emp_org from 1 source(s)
+[0m21:05:02.687575 [debug] [Thread-4 (]: Began executing node model.dbt_datavault_ah.hub_company
+[0m21:05:02.693271 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_datavault_ah.link_emp_org"
+[0m21:05:02.694139 [debug] [Thread-2 (]: Began executing node model.dbt_datavault_ah.sat_company
+[0m21:05:02.695267 [debug] [Thread-4 (]: Finished running node model.dbt_datavault_ah.hub_company
+[0m21:05:02.696699 [debug] [Thread-2 (]: Finished running node model.dbt_datavault_ah.sat_company
+[0m21:05:02.697522 [debug] [Thread-5 (]: Began executing node model.dbt_datavault_ah.link_emp_org
+[0m21:05:02.699029 [debug] [Thread-5 (]: Finished running node model.dbt_datavault_ah.link_emp_org
+[0m21:05:03.900632 [debug] [Thread-3 (]: SQL status: SUCCESS 6 in 1.347 seconds
+[0m21:05:04.110124 [debug] [Thread-3 (]: Using snowflake connection "model.dbt_datavault_ah.v_stg_sales"
+[0m21:05:04.110914 [debug] [Thread-3 (]: On model.dbt_datavault_ah.v_stg_sales: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "dbt_datavault_ah", "target_name": "dev", "node_id": "model.dbt_datavault_ah.v_stg_sales"} */
+describe table S45969_DBT_DB.S45969_DBT_AH_SCHEMA.raw_sales
+[0m21:05:04.281795 [debug] [Thread-3 (]: SQL status: SUCCESS 6 in 0.170 seconds
+[0m21:05:04.297748 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_datavault_ah.v_stg_sales"
+[0m21:05:04.298820 [debug] [Thread-3 (]: Began executing node model.dbt_datavault_ah.v_stg_sales
+[0m21:05:04.299952 [debug] [Thread-3 (]: Finished running node model.dbt_datavault_ah.v_stg_sales
+[0m21:05:04.301232 [debug] [Thread-4 (]: Began running node model.dbt_datavault_ah.link_emp_company_sales
+[0m21:05:04.301877 [debug] [Thread-2 (]: Began running node model.dbt_datavault_ah.t_link_sales
+[0m21:05:04.303023 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.hub_company, now model.dbt_datavault_ah.link_emp_company_sales)
+[0m21:05:04.303775 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_datavault_ah.sat_company, now model.dbt_datavault_ah.t_link_sales)
+[0m21:05:04.304470 [debug] [Thread-4 (]: Began compiling node model.dbt_datavault_ah.link_emp_company_sales
+[0m21:05:04.305066 [debug] [Thread-2 (]: Began compiling node model.dbt_datavault_ah.t_link_sales
+[0m21:05:04.315484 [info ] [Thread-4 (]: 21:05:04 + Loading S45969_DBT_DB.S45969_DBT_AH_SCHEMA.link_emp_company_sales from 1 source(s)
+[0m21:05:04.332326 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_datavault_ah.t_link_sales"
+[0m21:05:04.337812 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_datavault_ah.link_emp_company_sales"
+[0m21:05:04.339150 [debug] [Thread-2 (]: Began executing node model.dbt_datavault_ah.t_link_sales
+[0m21:05:04.339953 [debug] [Thread-4 (]: Began executing node model.dbt_datavault_ah.link_emp_company_sales
+[0m21:05:04.341088 [debug] [Thread-2 (]: Finished running node model.dbt_datavault_ah.t_link_sales
+[0m21:05:04.342225 [debug] [Thread-4 (]: Finished running node model.dbt_datavault_ah.link_emp_company_sales
+[0m21:05:04.345884 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m21:05:04.346940 [debug] [Dummy-1   ]: Connection 'model.dbt_datavault_ah.t_link_sales' was properly closed.
+[0m21:05:04.347589 [debug] [Dummy-1   ]: Connection 'model.dbt_datavault_ah.v_stg_sales' was properly closed.
+[0m21:05:04.348110 [debug] [Dummy-1   ]: Connection 'model.dbt_datavault_ah.link_emp_company_sales' was properly closed.
+[0m21:05:04.348655 [debug] [Dummy-1   ]: Connection 'model.dbt_datavault_ah.link_emp_org' was properly closed.
+[0m21:05:04.352597 [debug] [Dummy-1   ]: Command end result
+[0m21:05:04.410958 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m21:05:04.414356 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m21:05:04.424907 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m21:05:04.427058 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 11.443681, "process_in_blocks": "0", "process_kernel_time": 1.73, "process_mem_max_rss": "514388", "process_out_blocks": "0", "process_user_time": 9.73}
+[0m21:05:04.427878 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 21:05:04.427566 after 11.44 seconds
+[0m21:05:04.428537 [debug] [Dummy-1   ]: Flushing usage events
