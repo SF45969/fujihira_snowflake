@@ -1,0 +1,47 @@
+name: dbt_datavault_ah
+profile: dbt_datavault_ah
+version: '1.0.0'
+require-dbt-version: ['>=1.0.0', '<2.0.0']
+config-version: 2
+
+clean-targets:
+  - target
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+model-paths:
+  - models
+test-paths:
+  - tests
+target-path: target
+
+vars:
+  load_date: '2026-03-24'
+
+models:
+  dbt_datavault_ah:
+    raw_stage:
+      +materialized: view
+      +tags:
+        - 'raw'
+    stage:
+      +materialized: view
+      +tags:
+        - 'stage'
+    raw_vault:
+      +materialized: incremental
+      +tags:
+        - 'raw_vault'
+      hubs:
+        +tags:
+          - 'hub'
+      links:
+        +tags:
+          - 'link'
+      sats:
+        +tags:
+          - 'satellite'
+      t_links:
+        +tags:
+          - 't_link'

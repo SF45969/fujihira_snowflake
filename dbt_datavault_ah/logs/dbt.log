@@ -1,0 +1,12 @@
+
+
+============================== 19:54:02.845892 | ff78ddf2-6343-434c-ad8e-183d99a1fa3e ==============================
+[0m19:54:02.845892 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m19:54:02.847047 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt ', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m19:54:03.240655 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m19:54:03.795207 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  dbt found 1 package(s) specified in packages.yml, but only 0 package(s) installed in dbt_packages. Run "dbt deps" to install package dependencies.
+[0m19:54:03.797281 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.0529661, "process_in_blocks": "0", "process_kernel_time": 1.0, "process_mem_max_rss": "399824", "process_out_blocks": "0", "process_user_time": 4.33}
+[0m19:54:03.798050 [debug] [Dummy-1   ]: Command `cli compile` failed at 19:54:03.797749 after 1.05 seconds
+[0m19:54:03.798823 [debug] [Dummy-1   ]: Flushing usage events

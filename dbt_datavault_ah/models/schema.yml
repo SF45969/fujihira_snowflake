@@ -1,0 +1,37 @@
+version: 2
+
+sources:
+  - name: raw
+    database: S45969_DBT_DB
+    schema: S45969_DBT_RAW
+    tables:
+      - name: EMPLOYEE
+        description: 社員テーブル
+        columns:
+          - name: EMP_CD
+          - name: EMP_NM
+          - name: SEX
+          - name: BIRTHDAY
+          - name: ENTRY_DATE
+      - name: ORGANIZATION
+        description: 組織テーブル
+        columns:
+          - name: ORG_CD
+          - name: ORG_NM
+      - name: EMPLOYEE_ORGANIZATION
+        description: 社員所属テーブル
+        columns:
+          - name: EMP_CD
+          - name: ORG_CD
+      - name: COMPANY
+        description: 取引先テーブル
+        columns:
+          - name: COMPANY_CD
+          - name: COMPANY_NM
+      - name: SALES
+        description: 売上テーブル
+        columns:
+          - name: EMP_CD
+          - name: COMPANY_CD
+          - name: SALES_MONTH
+          - name: SALES_AMT
