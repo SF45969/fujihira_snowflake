@@ -1,0 +1,10 @@
+dbt_vault:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: S45969_DBT_ROLE
+      warehouse: S45969_DBT_WH
+      database: S45969_DBT_DB
+      schema: S45969_DBT_SCHEMA
+      threads: 8
